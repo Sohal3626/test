@@ -1,0 +1,84 @@
+extends layout
+
+block content
+  #cursor
+
+  section
+    form#customize
+      label 닉네임 입력 : 
+      input#nickname(placeholder="닉네임")
+      br
+      label 색 선택 : 
+      input#color(value="#000000")
+
+      #colorpicker
+      button#nameSubmit 확인
+
+    //- #leaderboard 
+      h3 리더보드
+      table 
+        thead
+          tr
+            td 순위
+            td 지도
+            td 기록
+            td 일시
+  section#settings
+    label(for="modeSelect") 모드 : 
+    select#modeSelect
+      option 지역 맞추기
+      option 점령전
+    
+    br
+
+    label(for="mapSelect") 지도 : 
+    select#mapSelect
+      optgroup(label="대한민국")
+        option 광역시도
+        option 시군구
+        option 시군구 (구 제외)
+        option 시군구 (수도권)
+        option 시군구 (서울 + 인천)
+        option 일반시 + 자치시
+        option 법정동 (인천)
+        option 읍면동
+        option 리
+      optgroup(label="전세계")
+        option 아시아 국가 [43]
+        option 오세아니아 
+        option 아프리카
+        option 미국 주 [48]
+
+    br
+    button#start START
+  
+  header
+    h3#question
+
+    h3#timer 00:00
+    h3#turn 내 턴
+    ul#players
+
+    button#population 인구 뷰
+    button#skip SKIP
+    br
+
+  main
+    #container
+
+  nav
+    ul#messages
+    form(id="chat", action="")
+      input(autocomplete="off")
+      button#clear CLEAR
+      button#send 보내기
+
+  script(src="/socket.io/socket.io.js") 
+  script(src="javascripts/d3.js")
+  script(src="javascripts/draw.js")
+  // script(src="javascripts/game.js")
+  script(src="javascripts/occupy.js")
+  //- script(src="javascripts/solo.js")
+
+  // Plugins
+  script(src="plugins/farbtastic/farbtastic.js") 

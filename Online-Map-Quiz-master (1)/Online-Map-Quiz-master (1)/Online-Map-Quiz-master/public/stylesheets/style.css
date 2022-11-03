@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    margin: 0;
+    position: absolute;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+header * {
+    margin: 0 5px;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+nav {
+    float: right;
+    z-index: 100;
+    background-color: white;
+    clear: both;
+}
+
+nav * {
+    z-index: 100;
+}
+
+#container {
+    z-index: 1;
+}
+
+h3 {
+    display: inline-block;
+}
+
+ul#players {
+    display: inline-block;
+}
+
+ul#players li {
+    display: inline-block;
+}
+
+button#skip {
+    position: absolute;
+    right: 0;
+}
+
+.background {
+    fill: dodgerblue
+}
+
+.wrong {
+    fill: red !important;
+    pointer-events: none;
+}
+
+.hint {
+    fill: aquamarine !important;
+}
+
+
+.special {
+    fill: #ffedb8 !important;
+}
+
+.port {
+    fill: #a9f !important;
+}
+
+.airport {
+    fill: #bafdff !important;
+}
+
+.fog {
+    fill: gray !important;
+}
+
+.neighbor {
+    fill: aquamarine !important;
+}
+
+#states path {
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-width: 1.5px;
+}
+
+#states path:hover {
+    fill: #00b700;
+}
+
+#states .active {
+    fill: #00b700;
+}
+
+#states .activeDetail {
+    fill: #00b700;
+}
+
+#states path {
+    cursor: pointer;
+}
+
+#states text {
+    cursor: pointer;
+    font-size: 12px;
+    fill: black;
+}
+
+text {
+    display: none;
+}
+
+footer {
+    margin-top: 100vh
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 500px;
+    text-align: center;
+}
+
+td {
+    padding: 7px;
+}
+
+/* Temporary */
+/*
+section {
+    display: none;
+}
+*/
+#cursor {
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1000;
+    translate: translate(50%, 50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    backdrop-filter: sepia(20%);
+    background-size: cover;
+    background-color: white;
+    text-align: center;
+}

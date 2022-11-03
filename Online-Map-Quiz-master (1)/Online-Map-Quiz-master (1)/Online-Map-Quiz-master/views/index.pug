@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h2 Occupation Online
+
+  form(action="/login", method="post")
+    | ID 
+    input(id="id", name="id")
+    br
+    | PW 
+    input(id="pw", name="pw", type="password")
+    br
+    input(type="submit")
+
+  script(src="javascripts/test.js") 
